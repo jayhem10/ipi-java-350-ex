@@ -1,3 +1,5 @@
+language: java
+
 addons:
   sonarcloud:
     organization: "jayhem10"
