@@ -3,9 +3,8 @@ language: java
 addons:
   sonarcloud:
     organization: "jayhem10"
-      # token:
-    # secure: "**************************" # encrypted value of your token
+
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonarclean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=011086a17c58bbbf6546d68e14ff073f038ee242
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=jayhem10_ipi-java-350-ex clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonarclean org.jacoco:jacoco-maven-plugin:prepare-agent ins'tall sonar:sonar -Dsonar.projectKey=011086a17c58bbbf6546d68e14ff073f038ee242
