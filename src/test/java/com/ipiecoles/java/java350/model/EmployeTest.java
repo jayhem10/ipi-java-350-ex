@@ -55,7 +55,6 @@ public class EmployeTest {
     }
 
 
-
     //Tests sur getPrimeAnnuelle
 
     @Test
