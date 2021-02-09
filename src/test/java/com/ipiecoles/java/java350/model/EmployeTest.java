@@ -87,7 +87,7 @@ public class EmployeTest {
         //When
         Double prime = employe.getPrimeAnnuelle();
         //Then
-        Double primeAttendue = 1000.0;
+        Double primeAttendue = 2300.0;
         Assertions.assertThat(prime).isEqualTo(primeAttendue);
     }
 
