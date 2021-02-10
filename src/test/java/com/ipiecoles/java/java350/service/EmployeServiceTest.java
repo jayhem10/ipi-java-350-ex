@@ -9,10 +9,7 @@ import com.ipiecoles.java.java350.repository.EmployeRepository;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.ArgumentCaptor;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
+import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import javax.persistence.EntityExistsException;
@@ -30,30 +27,41 @@ class EmployeServiceTest {
 
     @Test
     public void testEmbauchePremierEmploye() throws EmployeException {
-        //Given Pas d'employés en base
+        //GIVEN
         String nom = "Doe";
-        String prenom = "John";
-        Poste poste = Poste.TECHNICIEN;
+        String prenom ="John";
+        Poste poste =Poste.TECHNICIEN;
         NiveauEtude niveauEtude = NiveauEtude.BTS_IUT;
-        Double tempsPartiel = 1.0;
-        //Simuler qu'aucun employé n'est présent (ou du moins aucun matricule)
+        Double tempPartiel = 1.0;
+        //Simuler qu'aucun matricule n'est présent
         Mockito.when(employeRepository.findLastMatricule()).thenReturn(null);
-        //Simuler que la recherche par matricule ne renvoie pas de résultats
+
+
         Mockito.when(employeRepository.findByMatricule("T00001")).thenReturn(null);
-        //When
-        employeService.embaucheEmploye(nom, prenom, poste, niveauEtude, tempsPartiel);
-        //Then
-        ArgumentCaptor<Employe> employeArgumentCaptor = ArgumentCaptor.forClass(Employe.class);
-//        Mockito.verify(employeRepository, Mockito.times(1)).save(employeArgumentCaptor.capture());
-        Mockito.verify(employeRepository).save(employeArgumentCaptor.capture());
-        Employe employe = employeArgumentCaptor.getValue();
-        Assertions.assertThat(employe).isNotNull();
+        Mockito.when(employeRepository.save(Mockito.any(Employe.class))).thenAnswer(AdditionalAnswers.returnsFirstArg());
+        //WHEN
+
+        employeService.embaucheEmploye(nom,prenom, poste, niveauEtude,tempPartiel);
+
+
+        //THEN
+
+        // creer un capteur d'argument de la classe employe
+        ArgumentCaptor<Employe> employeCaptor = ArgumentCaptor.forClass(Employe.class);
+
+        // le mock va récuperer la valeur passer en parametre de la méthode save.lors de son premiere appel
+        Mockito.verify(employeRepository).save(employeCaptor.capture());
+
+        // grace au captor
+        Employe employe = employeCaptor.getValue();
+
         Assertions.assertThat(employe.getNom()).isEqualTo(nom);
         Assertions.assertThat(employe.getPrenom()).isEqualTo(prenom);
         Assertions.assertThat(employe.getSalaire()).isEqualTo(1825.46);
         Assertions.assertThat(employe.getTempsPartiel()).isEqualTo(1.0);
         Assertions.assertThat(employe.getDateEmbauche()).isEqualTo(LocalDate.now());
         Assertions.assertThat(employe.getMatricule()).isEqualTo("T00001");
+
     }
 
     @Test

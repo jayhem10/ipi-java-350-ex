@@ -7,3 +7,18 @@
 10-02-2021 13:11:06.777 ERROR c.i.j.java350.service.EmployeService.embaucheEmploye - L'employé de matricule T00001 existe déjà en BDD
 10-02-2021 13:11:06.834 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
 10-02-2021 13:11:06.850 ERROR c.i.j.java350.service.EmployeService.embaucheEmploye - Limite des 100000 matricules atteinte !
+10-02-2021 13:43:21.560 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 13:48:30.721 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 13:56:34.383 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 13:56:47.326 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 13:56:47.333 ERROR c.i.j.java350.service.EmployeService.embaucheEmploye - L'employé de matricule T00001 existe déjà en BDD
+10-02-2021 13:57:40.604 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 13:58:36.377 ERROR c.i.j.java350.service.EmployeService.embaucheEmploye - Limite des 100000 matricules atteinte !
+10-02-2021 13:58:49.434 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 13:58:49.443 ERROR c.i.j.java350.service.EmployeService.embaucheEmploye - L'employé de matricule T00001 existe déjà en BDD
+10-02-2021 13:58:55.224 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 14:02:04.291 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 14:04:47.810 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 14:04:56.472 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 14:05:06.086 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+10-02-2021 14:13:07.643 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
