@@ -145,7 +145,20 @@ public class Employe {
     }
 
     //Augmenter salaire
-    //public void augmenterSalaire(double pourcentage){}
+    public Object augmenterSalaire(double pourcentage){
+        if ( this.salaire == null){
+            return "Le salaire ne peut être null.";
+        }
+        if (this.salaire == 0){
+            return "Le salaire ne peut être égal à 0.";
+        }
+        if ( pourcentage <= 0){
+            return "Le salaire ne peut être augmenté avec un pourcentage négatif ou égal à 0.";
+        }
+        Double newSalaire = getSalaire()*pourcentage/100 + getSalaire();
+
+        return newSalaire;
+    }
 
     public Long getId() {
         return id;

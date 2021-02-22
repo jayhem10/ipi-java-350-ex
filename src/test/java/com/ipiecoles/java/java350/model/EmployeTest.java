@@ -1,11 +1,13 @@
 package com.ipiecoles.java.java350.model;
 
 import com.ipiecoles.java.java350.Java350Application;
+import com.ipiecoles.java.java350.exception.EmployeException;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 public class EmployeTest {
@@ -121,4 +123,88 @@ public class EmployeTest {
         //Then
         Assertions.assertThat(prime).isEqualTo(1000.0);
     }
+
+
+
+    //Tests sur la méthode augmenterSalaire
+
+    //Test augmentation de base
+    @Test
+    public void testSalaireAugmentation(){
+        //Given
+            Employe employe = new Employe("Doe", "John", null, LocalDate.now(), 1500d, 1, 1.0);
+            Double pourcentage = 5d;
+        //When
+            Object newSalaire = employe.augmenterSalaire(pourcentage);
+
+        //Then
+            Assertions.assertThat(newSalaire).isEqualTo(1575d);
+    }
+
+    //ifAugmentationWithNégatifOuZero
+    @Test
+    public void testSalairePourcentageAugmentationNegatifOrZero() {
+        //Given
+        Employe employe = new Employe("Doe", "John", null, LocalDate.now(), 1500d, 1, 1.0);
+        Double pourcentageNegatif = -5d;
+        Double pourcentageZero = 0d;
+
+        //When
+        Object newSalaire = employe.augmenterSalaire(pourcentageNegatif);
+        Object newSalaire2 = employe.augmenterSalaire(pourcentageZero);
+
+        //Then
+        Assertions.assertThat(newSalaire).isEqualTo("Le salaire ne peut être augmenté avec un pourcentage négatif ou égal à 0.");
+        Assertions.assertThat(newSalaire2).isEqualTo("Le salaire ne peut être augmenté avec un pourcentage négatif ou égal à 0.");
+    }
+
+    // IfSalaireEmployeIsEqualToZero
+    @Test
+    public void testSalaireIfZero()  {
+        //Given
+        Employe employe = new Employe("Doe", "John", null, LocalDate.now(), 0d, 1, 1.0);
+        Double pourcentage = 5d;
+
+        //When
+        Object newSalaire = employe.augmenterSalaire(pourcentage);
+
+        //Then
+        Assertions.assertThat(newSalaire).isEqualTo("Le salaire ne peut être égal à 0.");
+    }
+
+    // IfSalaireEmployeIsNull
+    @Test
+    public void testSalaireIfNull() {
+        //Given
+        Employe employe = new Employe("Doe", "John", null, LocalDate.now(), null, 1, 1.0);
+
+        //When
+        Object newSalaire = employe.augmenterSalaire(5);
+
+        //Then
+        Assertions.assertThat(newSalaire).isEqualTo("Le salaire ne peut être null.");
+    }
+
+//Test calcul nbRtt
+    @ParameterizedTest
+    @CsvSource({
+            "'2019-01-01', 8",
+            "'2020-01-01', 10",
+            "'2021-01-01', 10",
+            "'2022-01-01', 10",
+            "'2032-01-01', 11"
+    })
+    void testNbRTT(LocalDate date, Integer nbDeRTTAttendu) {
+        //Given
+        Employe employe = new Employe("Mandela", "Nelson", "M00001", LocalDate.now(), 1600d, 6, 1d);
+
+        //When
+        Integer nbRtt = employe.getNbRtt(date);
+
+        //Then
+        Assertions.assertThat(nbRtt).isEqualTo(nbDeRTTAttendu);
+    }
+
+
+
 }

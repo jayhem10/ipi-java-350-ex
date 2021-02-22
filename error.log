@@ -35,3 +35,56 @@
 10-02-2021 14:21:42.587 INFO  c.i.j.java350.service.EmployeService.embaucheEmploye - Employé créé : Employe{nom='Doe', prenom='John', matricule='T00001', dateEmbauche=2021-02-10, salaire=1825.46, performance=1, tempsPartiel=1.0}
 10-02-2021 14:21:42.598 INFO  c.i.j.java350.service.EmployeService.embaucheEmploye - Embauche d'un employé avec les infos suivantes : nom : Doe, prénom : John, poste TECHNICIEN, niveau d'étude : BTS_IUT, taux activité : 1.0
 10-02-2021 14:21:42.599 ERROR c.i.j.java350.service.EmployeService.embaucheEmploye - Limite des 100000 matricules atteinte !
+22-02-2021 09:52:55.519 INFO  c.i.j.java350.service.EmployeService.embaucheEmploye - Embauche d'un employé avec les infos suivantes : nom : Doe, prénom : John, poste TECHNICIEN, niveau d'étude : BTS_IUT, taux activité : 1.0
+22-02-2021 09:52:55.526 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+22-02-2021 09:52:55.527 ERROR c.i.j.java350.service.EmployeService.embaucheEmploye - L'employé de matricule T00001 existe déjà en BDD
+22-02-2021 09:52:55.598 INFO  c.i.j.java350.service.EmployeService.embaucheEmploye - Embauche d'un employé avec les infos suivantes : nom : Doe, prénom : John, poste TECHNICIEN, niveau d'étude : BTS_IUT, taux activité : 1.0
+22-02-2021 09:52:55.598 WARN  c.i.j.java350.service.EmployeService.embaucheEmploye - Aucun matricule trouvé, matricule initial affecté
+22-02-2021 09:52:55.600 INFO  c.i.j.java350.service.EmployeService.embaucheEmploye - Employé créé : Employe{nom='Doe', prenom='John', matricule='T00001', dateEmbauche=2021-02-22, salaire=1825.46, performance=1, tempsPartiel=1.0}
+22-02-2021 09:52:55.763 INFO  c.i.j.java350.service.EmployeService.embaucheEmploye - Embauche d'un employé avec les infos suivantes : nom : Doe, prénom : John, poste TECHNICIEN, niveau d'étude : BTS_IUT, taux activité : 1.0
+22-02-2021 09:52:55.763 ERROR c.i.j.java350.service.EmployeService.embaucheEmploye - Limite des 100000 matricules atteinte !
+22-02-2021 11:28:04.956 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1342 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 11:28:04.962 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 11:28:08.747 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 4.113 seconds (JVM running for 5.697)
+22-02-2021 11:28:35.454 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1348 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 11:28:35.456 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 11:28:39.041 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 3.929 seconds (JVM running for 5.411)
+22-02-2021 11:29:20.724 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1358 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 11:29:20.748 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 11:29:24.359 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 3.912 seconds (JVM running for 5.428)
+22-02-2021 11:29:54.863 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1363 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 11:29:54.866 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 11:29:58.478 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 3.988 seconds (JVM running for 5.459)
+22-02-2021 11:30:31.069 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1369 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 11:30:31.074 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 11:30:34.630 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 3.885 seconds (JVM running for 5.417)
+22-02-2021 11:32:57.302 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1377 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 11:32:57.308 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 11:33:00.863 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 3.915 seconds (JVM running for 5.417)
+22-02-2021 11:35:39.700 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1390 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 11:35:39.703 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 11:35:43.367 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 4.018 seconds (JVM running for 5.497)
+22-02-2021 11:36:00.025 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1396 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 11:36:00.027 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 11:36:03.557 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 3.892 seconds (JVM running for 5.504)
+22-02-2021 11:49:27.194 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1435 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 11:49:27.196 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 11:49:30.783 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 3.957 seconds (JVM running for 5.483)
+22-02-2021 12:13:30.592 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1529 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 12:13:30.596 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 12:13:34.313 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 4.061 seconds (JVM running for 5.595)
+22-02-2021 12:14:16.677 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarting - Starting EmployeServiceIntegrationTest on Mini-de-Jeremy with PID 1534 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 12:14:16.679 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 12:14:20.278 INFO  c.i.j.j.s.EmployeServiceIntegrationTest.logStarted - Started EmployeServiceIntegrationTest in 3.89 seconds (JVM running for 5.45)
+22-02-2021 12:57:24.926 INFO  c.i.j.j.r.EmployeRepositoryTest.logStarting - Starting EmployeRepositoryTest on Mini-de-Jeremy with PID 1641 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 12:57:24.931 INFO  c.i.j.j.r.EmployeRepositoryTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 12:57:28.541 INFO  c.i.j.j.r.EmployeRepositoryTest.logStarted - Started EmployeRepositoryTest in 3.943 seconds (JVM running for 5.484)
+22-02-2021 12:58:11.878 INFO  c.i.j.j.r.EmployeRepositoryTest.logStarting - Starting EmployeRepositoryTest on Mini-de-Jeremy with PID 1655 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 12:58:11.883 INFO  c.i.j.j.r.EmployeRepositoryTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 12:58:15.400 INFO  c.i.j.j.r.EmployeRepositoryTest.logStarted - Started EmployeRepositoryTest in 3.848 seconds (JVM running for 5.398)
+22-02-2021 13:03:49.874 INFO  c.i.j.j.r.EmployeRepositoryTest.logStarting - Starting EmployeRepositoryTest on Mini-de-Jeremy with PID 1688 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 13:03:49.879 INFO  c.i.j.j.r.EmployeRepositoryTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 13:03:53.613 INFO  c.i.j.j.r.EmployeRepositoryTest.logStarted - Started EmployeRepositoryTest in 4.072 seconds (JVM running for 5.606)
+22-02-2021 13:04:12.053 INFO  c.i.j.j.r.EmployeRepositoryTest.logStarting - Starting EmployeRepositoryTest on Mini-de-Jeremy with PID 1693 (started by jayhem10 in /Users/jayhem10/Documents/Cours/testIntegration)
+22-02-2021 13:04:12.055 INFO  c.i.j.j.r.EmployeRepositoryTest.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+22-02-2021 13:04:15.610 INFO  c.i.j.j.r.EmployeRepositoryTest.logStarted - Started EmployeRepositoryTest in 3.848 seconds (JVM running for 5.38)
