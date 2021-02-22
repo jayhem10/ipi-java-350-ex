@@ -59,10 +59,10 @@ class EmployeTest {
     //Tests sur getPrimeAnnuelle
 
     @Test
-    void testGetPrimeAnnuelle1(){
+    void testGetPrimeAnnuelleOne(){
         //Given
         Integer performance = 1;
-        String matricule = "T12345";
+        String matricule = "T0001";
         Double tauxActivite = 1.0;
         Long nbAnneeAnciennete = 0L;
 
@@ -76,10 +76,10 @@ class EmployeTest {
     }
 
     @Test
-    void testGetPrimeAnnuelle2(){
+    void testGetPrimeAnnuelleTwo(){
         //Given
         Integer performance = 2;
-        String matricule = "T12345";
+        String matricule = "T00002";
         Double tauxActivite = 1.0;
         Long nbAnneeAnciennete = 0L;
 
