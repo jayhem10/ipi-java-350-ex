@@ -75,22 +75,6 @@ class EmployeTest {
         Assertions.assertThat(prime).isEqualTo(primeAttendue);
     }
 
-    @Test
-    void testGetPrimeAnnuelleTwo(){
-        //Given
-        Integer performance = 2;
-        String matricule = "T00002";
-        Double tauxActivite = 1.0;
-        Long nbAnneeAnciennete = 0L;
-
-        Employe employe = new Employe("Doe", "John", matricule, LocalDate.now().minusYears(nbAnneeAnciennete),1500d, performance, tauxActivite);
-
-        //When
-        Double prime = employe.getPrimeAnnuelle();
-        //Then
-        Double primeAttendue = 2300.0;
-        Assertions.assertThat(prime).isEqualTo(primeAttendue);
-    }
 
     // Méthodes paramétrées
 
