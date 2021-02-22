@@ -10,10 +10,10 @@ import org.junit.jupiter.params.provider.CsvSource;
 import java.io.Serializable;
 import java.time.LocalDate;
 
-public class EmployeTest {
+class EmployeTest {
 
     @Test
-    public void testGetNbAnneeAncienneteDateEmbaucheNow(){
+    void testGetNbAnneeAncienneteDateEmbaucheNow(){
         //Given
         Employe employe = new Employe("Doe", "John", "T12345",
                 LocalDate.now(), 1500d, 1, 1.0);
@@ -24,7 +24,7 @@ public class EmployeTest {
     }
 
     @Test
-    public void testGetNbAnneeAncienneteDateEmbaucheNull(){
+    void testGetNbAnneeAncienneteDateEmbaucheNull(){
         //Given
         Employe employe = new Employe();
         employe.setDateEmbauche(null);
@@ -35,7 +35,7 @@ public class EmployeTest {
     }
 
     @Test
-    public void testGetNbAnneeAncienneteDateEmbaucheInfNow(){
+    void testGetNbAnneeAncienneteDateEmbaucheInfNow(){
         //Given
         Employe employe = new Employe("Doe", "John", "T12345", LocalDate.now().minusYears(5), 1500d,1,1.0);
 
@@ -46,7 +46,7 @@ public class EmployeTest {
     }
 
     @Test
-    public void testGetNbAnneeAncienneteDateEmbaucheSupNow(){
+    void testGetNbAnneeAncienneteDateEmbaucheSupNow(){
         //Given
         Employe employe = new Employe("Doe", "John", "T12345", LocalDate.now().plusYears(5), 1500d,1,1.0);
 
@@ -60,7 +60,7 @@ public class EmployeTest {
     //Tests sur getPrimeAnnuelle
 
     @Test
-    public void testGetPrimeAnnuelle1(){
+    void testGetPrimeAnnuelle1(){
         //Given
         Integer performance = 1;
         String matricule = "T12345";
@@ -77,7 +77,7 @@ public class EmployeTest {
     }
 
     @Test
-    public void testGetPrimeAnnuelle2(){
+    void testGetPrimeAnnuelle2(){
         //Given
         Integer performance = 2;
         String matricule = "T12345";
@@ -102,7 +102,7 @@ public class EmployeTest {
             "2, 'T12345', 1.0, 0, 2300.0",
             "1, 'T12345', 1.0, 2, 1200.0",
             })
-    public void testGetPrimeAnnuelle(Integer performance, String matricule, Double tauxActivite, Long nbAnneesAnciennete,
+    void testGetPrimeAnnuelle(Integer performance, String matricule, Double tauxActivite, Long nbAnneesAnciennete,
                                      Double primeAttendue){
         //Given
         Employe employe = new Employe("Doe", "John", matricule,
@@ -115,7 +115,7 @@ public class EmployeTest {
     }
 
     @Test
-    public void testGetPrimeAnnuelleMatriculeNull(){
+    void testGetPrimeAnnuelleMatriculeNull(){
         //Given
         Employe employe = new Employe("Doe", "John", null, LocalDate.now(), 1500d, 1, 1.0);
         //When

@@ -21,7 +21,7 @@ class EmployeRepositoryTest {
 
 
     @Test
-    public void testFindLastMatricule0Employe(){
+    void testFindLastMatricule0Employe(){
         //Given
         //When
         String lastMatricule = employeRepository.findLastMatricule();
@@ -30,7 +30,7 @@ class EmployeRepositoryTest {
     }
 
     @Test
-    public void testFindLastMatricule1Employe(){
+    void testFindLastMatricule1Employe(){
         //Given
         //Insérer des données en base
         employeRepository.save(new Employe("Doe", "John", "T12345", LocalDate.now(), 1500d, 1, 1.0));
@@ -42,7 +42,7 @@ class EmployeRepositoryTest {
     }
 
     @Test
-    public void testFindLastMatriculeNEmployes(){
+    void testFindLastMatriculeNEmployes(){
         //Given
         //Insérer des données en base
         employeRepository.save(new Employe("Doe", "John", "T12345", LocalDate.now(), 1500d, 1, 1.0));

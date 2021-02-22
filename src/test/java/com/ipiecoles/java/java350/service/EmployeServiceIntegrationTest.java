@@ -25,7 +25,7 @@ class EmployeServiceIntegrationTest {
     private EmployeRepository employeRepository;
 
     @Test
-    public void testEmbauchePremierEmploye() throws EmployeException {
+    void testEmbauchePremierEmploye() throws EmployeException {
         //Given
         String nom = "Doe";
         String prenom = "John";
