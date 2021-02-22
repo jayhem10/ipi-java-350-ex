@@ -20,7 +20,7 @@ class EmployeTest {
         //When
         Integer anneeAnciennete = employe.getNombreAnneeAnciennete();
         //Then
-        Assertions.assertThat(anneeAnciennete).isNull();
+        Assertions.assertThat(anneeAnciennete).isZero();
     }
 
     @Test
