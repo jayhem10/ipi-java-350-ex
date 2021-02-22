@@ -21,7 +21,7 @@ class EmployeRepositoryTest {
 
 
     @Test
-    public void testFindLastMatricule0Employe(){
+    void testFindLastMatricule0Employe(){
         //Given
         //When
         String lastMatricule = employeRepository.findLastMatricule();
@@ -30,7 +30,7 @@ class EmployeRepositoryTest {
     }
 
     @Test
-    public void testFindLastMatricule1Employe(){
+    void testFindLastMatricule1Employe(){
         //Given
         //Insérer des données en base
         employeRepository.save(new Employe("Doe", "John", "T12345", LocalDate.now(), 1500d, 1, 1.0));
@@ -42,7 +42,7 @@ class EmployeRepositoryTest {
     }
 
     @Test
-    public void testFindLastMatriculeNEmployes(){
+    void testFindLastMatriculeNEmployes(){
         //Given
         //Insérer des données en base
         employeRepository.save(new Employe("Doe", "John", "T12345", LocalDate.now(), 1500d, 1, 1.0));
@@ -53,6 +53,21 @@ class EmployeRepositoryTest {
         String lastMatricule = employeRepository.findLastMatricule();
         //Then
         Assertions.assertThat(lastMatricule).isEqualTo("40325");
+    }
+
+    @Test
+    void testAvgPerformanceWhereMatriculeStartsWith(){
+        //Given
+        //Insérer des données en base
+        employeRepository.save(new Employe("Ellington", "Duke", "C12345", LocalDate.now(), 1500d, 1, 1.0));
+        employeRepository.save(new Employe("Parker", "Charlie", "C40325", LocalDate.now(), 1500d, 3, 1.0));
+        employeRepository.save(new Employe("John", "Coltrane", "C06432", LocalDate.now(), 1500d, 2, 1.0));
+        //When
+        //Exécuter des requêtes en base
+        Double performanceAvg = employeRepository.avgPerformanceWhereMatriculeStartsWith("C");
+        //Then
+        Assertions.assertThat(performanceAvg).isEqualTo(2);
+
     }
 
     @BeforeEach

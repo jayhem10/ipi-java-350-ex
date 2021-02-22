@@ -97,6 +97,8 @@ public class Employe {
             case SATURDAY:
                 nbSamediDimanche = nbSamediDimanche + 1;
                 break;
+            default:
+                break;
         }
         int nbJoursFeriesSemaine = (int) Entreprise.joursFeries(dateReference).stream().filter(localDate ->
                 localDate.getDayOfWeek().getValue() <= DayOfWeek.FRIDAY.getValue()).count();
@@ -145,7 +147,19 @@ public class Employe {
     }
 
     //Augmenter salaire
-    //public void augmenterSalaire(double pourcentage){}
+    public Object augmenterSalaire(double pourcentage){
+        if ( this.salaire == null){
+            return "Le salaire ne peut être null.";
+        }
+        if (this.salaire == 0){
+            return "Le salaire ne peut être égal à 0.";
+        }
+        if ( pourcentage <= 0){
+            return "Le salaire ne peut être augmenté avec un pourcentage négatif ou égal à 0.";
+        }
+        return getSalaire()*pourcentage/100 + getSalaire();
+
+    }
 
     public Long getId() {
         return id;

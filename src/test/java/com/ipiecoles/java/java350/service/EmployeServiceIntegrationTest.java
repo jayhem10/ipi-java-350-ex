@@ -6,6 +6,8 @@ import com.ipiecoles.java.java350.model.NiveauEtude;
 import com.ipiecoles.java.java350.model.Poste;
 import com.ipiecoles.java.java350.repository.EmployeRepository;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -23,7 +25,7 @@ class EmployeServiceIntegrationTest {
     private EmployeRepository employeRepository;
 
     @Test
-    public void testEmbauchePremierEmploye() throws EmployeException {
+    void testEmbauchePremierEmploye() throws EmployeException {
         //Given
         String nom = "Doe";
         String prenom = "John";
@@ -45,6 +47,33 @@ class EmployeServiceIntegrationTest {
         Assertions.assertThat(employe.getDateEmbauche()).isEqualTo(LocalDate.now());
         Assertions.assertThat(employe.getMatricule()).isEqualTo("T00001");
 
+    }
+
+
+    @Test
+    void testIntegrationCalculPerformanceCommercial() throws EmployeException {
+        //Given
+        String nom = "Bellamy";
+        String prenom = "Matthew";
+        String matricule = "C00001";
+        LocalDate dateEmbauche = LocalDate.now();
+        Double salaire = 2000d;
+        Integer performance = 4;
+        Double tempsPartiel = 1d;
+        employeRepository.save(new Employe(nom, prenom, matricule, dateEmbauche, salaire, performance, tempsPartiel));
+
+        //When
+        employeService.calculPerformanceCommercial(matricule, 4700L, 5000L);
+
+        //Then
+        Employe employe = employeRepository.findByMatricule(matricule);
+        Assertions.assertThat(employe.getPerformance()).isEqualTo(2);
+    }
+
+    @BeforeEach
+    @AfterEach
+    public void purgeBdd(){
+        employeRepository.deleteAll();
     }
 
 }
