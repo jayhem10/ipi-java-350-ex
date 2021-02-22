@@ -142,6 +142,31 @@ class EmployeServiceTest {
         Assertions.assertThat(employeWithNewPerformance.getPerformance()).isEqualTo(newPerformance);
     }
 
+    @ParameterizedTest
+    @CsvSource({
+            "C00001, -1000, 1000, Le chiffre d'affaire traité ne peut être négatif ou null !",
+            "C00001, , 1000, Le chiffre d'affaire traité ne peut être négatif ou null !",
+
+            "C00001, 1000, -1000, L'objectif de chiffre d'affaire ne peut être négatif ou null !",
+            "C00001, 1000, , L'objectif de chiffre d'affaire ne peut être négatif ou null !",
+
+            "T00001, 1000, 1000, Le matricule ne peut être null et doit commencer par un C !",
+            ", 1000, 1000, Le matricule ne peut être null et doit commencer par un C !",
+
+            "C00001, 1000, 1000, Le matricule C00001 n'existe pas !",
+    })
+    void testCalculPerformanceCommercialExceptions(String matricule, Long caTraite, Long objectifCa, String exceptionMessage) {
+        //Given
+        try {
+            //When
+            employeService.calculPerformanceCommercial(matricule, caTraite, objectifCa);
+            Assertions.fail("calculPerformanceCommercial aurait du lancer une exception");
+        } catch (Exception e) {
+            //Then
+            Assertions.assertThat(e).isInstanceOf(EmployeException.class);
+            Assertions.assertThat(e.getMessage()).isEqualTo(exceptionMessage);
+        }
+    }
 }
 
 
