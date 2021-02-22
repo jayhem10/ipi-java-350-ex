@@ -130,7 +130,7 @@ public class EmployeTest {
 
     //Test augmentation de base
     @Test
-    public void testSalaireAugmentation(){
+    void testSalaireAugmentation(){
         //Given
             Employe employe = new Employe("Doe", "John", null, LocalDate.now(), 1500d, 1, 1.0);
             Double pourcentage = 5d;
@@ -143,7 +143,7 @@ public class EmployeTest {
 
     //ifAugmentationWithNégatifOuZero
     @Test
-    public void testSalairePourcentageAugmentationNegatifOrZero() {
+    void testSalairePourcentageAugmentationNegatifOrZero() {
         //Given
         Employe employe = new Employe("Doe", "John", null, LocalDate.now(), 1500d, 1, 1.0);
         Double pourcentageNegatif = -5d;
@@ -160,7 +160,7 @@ public class EmployeTest {
 
     // IfSalaireEmployeIsEqualToZero
     @Test
-    public void testSalaireIfZero()  {
+    void testSalaireIfZero()  {
         //Given
         Employe employe = new Employe("Doe", "John", null, LocalDate.now(), 0d, 1, 1.0);
         Double pourcentage = 5d;
@@ -174,7 +174,7 @@ public class EmployeTest {
 
     // IfSalaireEmployeIsNull
     @Test
-    public void testSalaireIfNull() {
+    void testSalaireIfNull() {
         //Given
         Employe employe = new Employe("Doe", "John", null, LocalDate.now(), null, 1, 1.0);
 

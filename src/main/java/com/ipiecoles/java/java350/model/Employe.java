@@ -155,9 +155,8 @@ public class Employe {
         if ( pourcentage <= 0){
             return "Le salaire ne peut être augmenté avec un pourcentage négatif ou égal à 0.";
         }
-        Double newSalaire = getSalaire()*pourcentage/100 + getSalaire();
+        return getSalaire()*pourcentage/100 + getSalaire();
 
-        return newSalaire;
     }
 
     public Long getId() {

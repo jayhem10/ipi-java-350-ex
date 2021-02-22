@@ -56,7 +56,7 @@ class EmployeRepositoryTest {
     }
 
     @Test
-    public void testAvgPerformanceWhereMatriculeStartsWith(){
+    void testAvgPerformanceWhereMatriculeStartsWith(){
         //Given
         //Insérer des données en base
         employeRepository.save(new Employe("Ellington", "Duke", "C12345", LocalDate.now(), 1500d, 1, 1.0));
