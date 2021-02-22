@@ -123,6 +123,23 @@ class EmployeTest {
         Assertions.assertThat(prime).isEqualTo(1000.0);
     }
 
+    @Test
+    void testGetPrimeAnnuelleManager(){
+        //Given
+        Integer performance = 1;
+        String matricule = "M12345";
+        Double tauxActivite = 1.0;
+        Long nbAnneeAnciennete = 0L;
+
+        Employe employe = new Employe("Doe", "John", matricule, LocalDate.now().minusYears(nbAnneeAnciennete),1500d, performance, tauxActivite);
+
+        //When
+        Double prime = employe.getPrimeAnnuelle();
+        //Then
+        Double primeAttendue = 1700.0;
+        Assertions.assertThat(prime).isEqualTo(primeAttendue);
+    }
+
 
 
     //Tests sur la méthode augmenterSalaire
