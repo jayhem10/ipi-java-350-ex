@@ -75,7 +75,6 @@ class EmployeTest {
         Assertions.assertThat(prime).isEqualTo(primeAttendue);
     }
 
-
     // Méthodes paramétrées
 
     @ParameterizedTest(name = "Perf {0}, matricule {1}, txActivite {2}, anciennete {3} => prime {4}")
