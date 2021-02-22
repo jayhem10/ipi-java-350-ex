@@ -187,16 +187,18 @@ class EmployeTest {
 //Test calcul nbRtt
     @ParameterizedTest
     @CsvSource({
-            "'2019-01-01', 8",
-            "'2020-01-01', 10",
-            "'2021-01-01', 10",
-            "'2022-01-01', 10",
-            "'2032-01-01', 11"
+            "'2019-01-01',1, 8",
+            "'2020-01-01',1, 10",
+            "'2020-01-01',0.5, 5",
+            "'2021-01-01',1, 10",
+            "'2022-01-01',1, 10",
+            "'2032-01-01',1, 11",
+            "'2044-01-01', 1, 9",
     })
-    void testNbRTT(LocalDate date, Integer nbDeRTTAttendu) {
+    void testNbRTT(LocalDate date, Double tempsActivite, Integer nbDeRTTAttendu) {
         //Given
         Employe employe = new Employe("Mandela", "Nelson", "M00001", LocalDate.now(), 1600d, 6, 1d);
-
+        employe.setTempsPartiel(tempsActivite);
         //When
         Integer nbRtt = employe.getNbRtt(date);
 
